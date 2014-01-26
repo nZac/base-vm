@@ -24,5 +24,11 @@ Vagrant.configure("2") do |config|
 end
 ```
 
+## What come with it
+
+The OS is an up-to-date Ubuntu 12.04.3.  It will come pre-installed with
+VirtualBox Guest Additions and is Vagrant ready.
+
+
 **Version 0.1**
 

@@ -13,7 +13,7 @@ usermod -a -G admin vagrant
 echo "backing up sudoers file"
 cp /etc/sudoers /etc/sudoers.orig
 
-echo "setting up vagrand sudo settings"
+echo "setting up vagrant sudo settings"
 sed -i -e '/Defaults\s\+env_reset/a Defaults\texempt_group=admin' /etc/sudoers
 sed -i -e 's/%admin ALL=(ALL) ALL/%admin ALL=NOPASSWD:ALL/g' /etc/sudoers
 
@@ -40,7 +40,7 @@ sudo apt-get update -y -qq > /dev/null
 echo "upgrading packages"
 sudo apt-get upgrade -y -qq > /dev/null
 
-# ------------------ package instalation ----------------------#
+# ------------------ package installation ----------------------#
 echo "installing packages for the guest additions"
 sudo apt-get install -y -qq dkms build-essential linux-headers-generic
 
